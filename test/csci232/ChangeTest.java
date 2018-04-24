@@ -54,5 +54,24 @@ public class ChangeTest {
         ArrayList<Integer> result = Coin.get(coins, change);
         assertEquals(expResult, result);
     }
+	
+    /*
+    * This method will compare the Greedy Algorithm to the Dynamic Programming Solution
+    * In the case that the coin system is the set {1, 4, 5} there would be two different solutions
+    * The Greedy Algorithm would choose a 5 first and then three 1's
+    * However the Dyanmic Programming Solution would choose two 4's for the fewest number of coins
+    */
+    @Test
+    public void testComparison(){
+        
+        int[] coins = {1, 4, 5};
+        int change = 8;
+        ArrayList<Integer> expResultDynamic = new ArrayList();
+        expResultDynamic.add(4);
+        expResultDynamic.add(4);
+        ArrayList<Integer> result = Change.get(coins, change);
+        assertEquals(expResultDynamic, result);
+        
+    }
     
 }

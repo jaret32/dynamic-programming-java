@@ -20,13 +20,14 @@ public class ChangeTest {
     }
 
     @Test
-    public void testEmptyArray() {
-        System.out.println("get");
-        ArrayList<Integer> expResult = null;
-        ArrayList<Integer> result = Change.get();
+    public void testGet() {
+        int[] coins = {1, 5, 10, 12, 25};
+        int change = 24;
+        ArrayList<Integer> expResult = new ArrayList();
+        expResult.add(12);
+        expResult.add(12);
+        ArrayList<Integer> result = Change.get(coins, change);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

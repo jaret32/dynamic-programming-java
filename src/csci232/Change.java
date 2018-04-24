@@ -1,12 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package csci232;
 
 import java.util.ArrayList;
 
+/*
+* Author: Jaret Boyer, Kayla Wheeler, Kyle Hagerman
+* Date: April 24, 2018
+* Overview: Change is the class that holds the greedy algorithm to determine the minimum amount of change needed,
+* and if the array is 0 or empty, it returns an exception. 
+*/
 
 public class Change {
     
@@ -18,6 +19,18 @@ public class Change {
         int[] lastCoin = new int[amount + 1];
         numCoins[0] = 0;
         lastCoin[0] = 0;
+       
+        
+        int p = 0;
+        for(int k = 0; k < coins.length; k++){
+            p += coins[k];
+        }
+        
+        //if array is empty, throws the exception
+        if(p == 0){
+            throw new IllegalArgumentException("Array of size 0 is not allowed");
+        }
+    
         
         // iterate through each value up to amount
         for (int i = 1; i <= amount; i++) {

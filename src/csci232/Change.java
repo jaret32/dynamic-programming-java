@@ -7,10 +7,13 @@ package csci232;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Jaret
- */
+/*
+* Author: Jaret Boyer, Kayla Wheeler, Kyle Hagerman
+* Date: April 24, 2018
+* Overview: Change is the class that holds the greedy algorithm to determine the minimum amount of change needed,
+* and if the array is 0 or empty, it returns an exception. 
+*/
+
 public class Change {
     
     public static ArrayList<Integer> get(int[] coins, int amount) {

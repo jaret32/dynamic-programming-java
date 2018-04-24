@@ -30,4 +30,13 @@ public class ChangeTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testGet1() {
+        int[] coins = {};
+        int change = 0;
+        ArrayList<Integer> expResult = new ArrayList();
+        Exception e = assertThrows(IllegalArgumentException.class, () -> {  Change.get(coins,change); } );
+		assertEquals("Array of size 0 is not allowed", e.getMessage());
+    }
+    
 }

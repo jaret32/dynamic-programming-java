@@ -18,21 +18,18 @@ public class Change {
         int[] lastCoin = new int[amount + 1];
         numCoins[0] = 0;
         lastCoin[0] = 0;
+       
         
         int p = 0;
-   
         for(int k = 0; k < coins.length; k++){
             p += coins[k];
         }
+        
+        //if array is empty, throws the exception
         if(p == 0){
             throw new IllegalArgumentException("Array of size 0 is not allowed");
         }
     
-   
-    if(amount == 0){
-        ArrayList<Integer> array = new ArrayList();
-        return array;
-    }
         
         for (int i = 1; i <= amount; i++) {
             int min = Integer.MAX_VALUE;
